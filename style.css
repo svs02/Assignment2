@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 95%;
+    display: grid;
+    grid-template-areas: "header header header header" "side main main main" "footer footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 130px 1fr;
+}
+
+.header {
+    grid-area: header;
+    grid-template-columns: 130px 1fr 1fr 1fr;
+    gap: 10px;
+    grid-column: 1/5;
+    text-align: center;
+    background-color: peachpuff;
+}
+
+.side {
+    grid-area: side;
+}
+
+.sidetitle {
+    font-family: 'Noto Serif', serif;
+    font-size: 25px;
+    border: 20px solid white;
+}
+
+.footer {
+    background-color: burlywood;
+    grid-area: footer;
+    text-align: center;
+    grid-column: 1/5;
+}
+
+.main {
+    display: grid;
+    background-color: ivory;
+    grid-column: 2/5;
+    grid-template-columns: repeat(7, 115px);
+    grid-template-rows: 25px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.item {
+    grid-template-columns: 110px;
+    grid-template-rows: 25px;
+}
+
+#newNote {
+    background-color: aqua;
+    border-radius: 15px;
+    grid-template-rows: 25px;
+    grid-template-columns: 110px;
+    color: aliceblue;
+    grid-column: 1;
+    opacity: 1;
+}
+
+.item:nth-child(2) {
+    background-color: gray;
+    border-radius: 15px;
+    grid-template-rows: 25px;
+    height: 25px;
+    width: 110px;
+}
+
+#textArea {
+    background-color: pink;
+    grid-column: 1/9;
+    grid-row: 2/4;
+    border-radius: 15px;
+    grid-template-columns: 85%;
+    grid-template-rows: minmax(100px, 200px);
+    text-align: left;
+}
+
+#save {
+    background-color: greenyellow;
+    grid-column: 5;
+    grid-row: 4;
+    border-radius: 15px;
+    height: 20px;
+    width: 110px;
+    text-align: center;
+}
+
+.item:nth-child(5) {
+    background-color: rebeccapurple;
+    grid-column: 6;
+    grid-row: 4;
+    border-radius: 15px;
+    height: 20px;
+    width: 110px;
+    text-align: center;
+}
+
+.h1 {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.h5 {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.font {
+    color: aliceblue;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: small;
+    text-align: center;
+}
+
+.font2 {
+    color: aliceblue;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: small;
+    text-align: left;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 750px) {
+    html,
+    body {
+        height: 100%;
+    }
+    .container {
+        height: 95%;
+        display: grid;
+        grid-template-areas: "header " "side" "main" "footer";
+        grid-template-rows: 80px 80px 1fr 100px;
+        grid-template-columns: 1fr;
+    }
+    .header {
+        grid-row: 1;
+        grid-column: 1/5;
+        justify-content: center;
+    }
+    .side {
+        display: flex;
+        height: 100px;
+        text-align: center;
+    }
+    .main {
+        display: grid;
+        background-color: ivory;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: 25px 1fr 25px;
+        grid-row: 3/4;
+        grid-column: 1/5;
+        padding: 10px;
+        gap: 20px;
+    }
+    .item {
+        grid-template-columns: 110px;
+        grid-template-rows: 100%;
+    }
+    .item:nth-child(1) {
+        background-color: aqua;
+        border-radius: 15px;
+        grid-template-rows: 25px;
+        grid-template-columns: 110px;
+        color: aliceblue;
+        grid-column: 1;
+    }
+    .item:nth-child(2) {
+        background-color: gray;
+        border-radius: 15px;
+        grid-template-rows: 25px;
+        height: 25px;
+        width: 110px;
+    }
+    .item:nth-child(3) {
+        background-color: pink;
+        grid-column: 1/5;
+        grid-row: 2/4;
+        border-radius: 15px;
+        grid-template-columns: 85%;
+        grid-template-rows: minmax(100px, 200px);
+    }
+    .item:nth-child(4) {
+        background-color: greenyellow;
+        grid-column: 3;
+        grid-row: 4;
+        border-radius: 15px;
+        height: 20px;
+        width: 110px;
+        text-align: center;
+    }
+    .item:nth-child(5) {
+        background-color: rebeccapurple;
+        grid-column: 4;
+        grid-row: 4;
+        border-radius: 15px;
+        height: 20px;
+        width: 110px;
+        text-align: center;
+    }
+}

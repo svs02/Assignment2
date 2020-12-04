@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Take Better Note</h1>
+        </div>
+        <div class="side">
+            <div class="sidetitle">My Note</div>
+            <ul>
+                <li>note one</li>
+                <li>note two</li>
+            </ul>
+
+        </div>
+        <div class="main">
+            <div id="newNote" class="item">
+                <div class="font">
+                    <div onclick="on();">New Note</div>
+                </div>
+            </div>
+
+            <div class="item" id="darkTheme">
+                <div class="font">
+                    <div onclick="darkTheme()" id="darkButton">Dark Theme</div>
+                </div>
+            </div>
+
+            <textarea id="textArea" class="item">
+                This is a palceholder
+            </textarea>
+
+            <div id="save" class="item">
+                <div class="font">
+                    <div onclick="alert('Save');">Save</div>
+                </div>
+            </div>
+
+            <div id="cancle" class="item">
+                <div class="font">
+                    <div onclick="off();">Cancle</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>Keep in touch</h5>
+            <img src="./instagram.png" alt="instagram icon" width="30px" height="30px">
+            <img src="./facebook.png" alt="facebook icon" width="30px" height="30px">
+        </div>
+    </div>
+    <script type="text/javascript" src="java.js"></script>
+</body>
+
+</html>
